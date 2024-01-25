@@ -42,3 +42,5 @@ def rechercheGD(liste, n, g, d):
 
 #print(recherche(liste, 3))
 print(rechercheGD(liste, 1, 0, len(liste)-1))
+
+le push a marché
