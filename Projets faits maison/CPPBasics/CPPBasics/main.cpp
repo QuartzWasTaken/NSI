@@ -1,10 +1,14 @@
-// C'est l'heure d'apprendre le C++ !
 #include <iostream>
 
-void Log(int);
+void Log(const char*);
+int Ask();
 
 int main()
 {
-	int variable = 8;
-	Log(variable);
+	char* ptr = new char[8];
+	memset(ptr, 0, 8);
+	std::cout << *ptr;
+
+	delete[8] ptr;
+	
 }
