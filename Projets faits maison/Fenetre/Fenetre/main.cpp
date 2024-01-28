@@ -11,6 +11,7 @@ LRESULT CALLBACK WindowProcedure(HWND, UINT, WPARAM, LPARAM);
 HMENU hMenu;
 
 void AddMenus(HWND);
+void AddControls();
 
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR args, int ncmdshow)
 {
@@ -76,6 +77,7 @@ LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 	// On window start, display the menus
 	case WM_CREATE:
 		AddMenus(hWnd);
+		AddControls();
 		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);
@@ -109,4 +111,9 @@ void AddMenus(HWND hWnd)
 
 	// Once everything is added to the menu list, display them on screen
 	SetMenu(hWnd, hMenu);
+}
+
+void AddControls()
+{
+	CreateWindowExW();
 }
